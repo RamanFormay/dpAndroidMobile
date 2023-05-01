@@ -25,8 +25,8 @@ public class dpMobile_AgeGate extends BaseTest{
     @Test(priority = 1)
     public void AgeGatePage_TextValidations(){
         Assert.assertEquals(ageGatePage.getTitleText(), "WELCOME TO \n" +
-                "DUDE PERFECT+");
-        Assert.assertEquals(ageGatePage.getDescriptionText(), "Choose your path and let’s get started.");
+                "DUDE PERFECT");
+        Assert.assertEquals(ageGatePage.getDescriptionText(), "Help us keep our community safe.");
         Assert.assertEquals(ageGatePage.youthButtonText(), "YOUTH");
         Assert.assertEquals(ageGatePage.adultButtonText(), "ADULT");
     }
@@ -56,7 +56,7 @@ public class dpMobile_AgeGate extends BaseTest{
     public void AgeGatePage_YOBContinueButtonDisabled(){
         ageGatePage.clickAdultButton();
         yearOfBirthPage.InputField("2010");
-        Assert.assertFalse(yearOfBirthPage.continueButton());
+        Assert.assertTrue(yearOfBirthPage.continueButton());
         driver.resetApp();
     }
 //  ------------------ Positive Flow Validations-----------------

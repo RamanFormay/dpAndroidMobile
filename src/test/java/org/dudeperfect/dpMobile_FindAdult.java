@@ -23,7 +23,6 @@ public class dpMobile_FindAdult extends BaseTest {
         Assert.assertEquals(findAdultPage.findAdultTitleText(),"FIND A PARENT OR \n" +
                 "GUARDIAN TO CONTINUE");
         Assert.assertEquals(findAdultPage.parentButtonText(),"I'M A PARENT");
-        Assert.assertEquals(findAdultPage.backButtonText(),"GO BACK");
-
+        Assert.assertEquals(findAdultPage.backButtonText(),"Go Back");
     }
 }

@@ -14,14 +14,12 @@ public class YearOfBirthPage {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    @AndroidFindBy(xpath ="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView[1]")
+    @AndroidFindBy(id="tv.kidoodle.android.dudeperfect:id/title")
     private WebElement yobTitle;
-    @AndroidFindBy(xpath ="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView[2]")
+    @AndroidFindBy(id="tv.kidoodle.android.dudeperfect:id/description")
     private WebElement yobDescription;
     @AndroidFindBy(id="tv.kidoodle.android.dudeperfect:id/yearOfBirth")
     private WebElement yobInputField;
-    @AndroidFindBy(id="tv.kidoodle.android.dudeperfect:id/edittextHint")
-    private WebElement textHint;
     @AndroidFindBy(id="tv.kidoodle.android.dudeperfect:id/edittextError")
     private WebElement errorText;
     @AndroidFindBy(id="tv.kidoodle.android.dudeperfect:id/checkBox")
@@ -44,9 +42,7 @@ public class YearOfBirthPage {
     public String getYobDescription(){
         return yobDescription.getText();
     }
-    public  String getHintText(){
-        return textHint.getText();
-    }
+
     public String getErrorHintText(){
         return errorText.getText();
     }

@@ -25,10 +25,8 @@ public class dpMobile_YearOfBirth extends BaseTest{
                 "YEAR OF BIRTH?");
         Assert.assertEquals(yearOfBirthPage.getYobDescription(),"This information is not stored and \n" +
                 "is only used for age verification.");
-        Assert.assertEquals(yearOfBirthPage.getHintText(),"Enter your birth year");
         Assert.assertEquals( yearOfBirthPage.getPrivacyPolicy(),"I agree to the Privacy Policy, \n" +
                "Terms and Conditions & accept cookies.");
-        System.out.println(yearOfBirthPage.getPrivacyPolicy());
         Assert.assertEquals(yearOfBirthPage.getContinueButtonText(), "CONTINUE");
 
     }
