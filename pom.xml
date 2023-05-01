@@ -56,7 +56,7 @@
             <version>3.0.0</version>
             <configuration>
               <suiteXmlFiles>
-                <suiteXmlFile>testng_dudePerfect_ageGateValidations.xml</suiteXmlFile>
+                <suiteXmlFile>testng_dudePerfect_splashScreen.xml</suiteXmlFile>
               </suiteXmlFiles>
             </configuration>
           </plugin>
