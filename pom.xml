@@ -43,4 +43,32 @@
     </dependency>
 
   </dependencies>
+
+  <profiles>
+    <profile>
+      <id>Regression</id>
+      <build>
+      <pluginManagement>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.0.0</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>testng_dudePerfect_ageGateValidations.xml</suiteXmlFile>
+              </suiteXmlFiles>
+            </configuration>
+          </plugin>
+        </plugins>
+      </pluginManagement>
+      </build>
+    </profile>
+
+    <profile>
+      <id>Smoke</id>
+    </profile>
+
+  </profiles>
+
 </project>
