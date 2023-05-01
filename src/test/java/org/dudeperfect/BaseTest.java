@@ -22,9 +22,10 @@ public class BaseTest {
     public static void open() throws MalformedURLException {
 
         System.out.println("Application started");
-        service = new AppiumServiceBuilder().withAppiumJS( new File("//usr//local//lib//node_modules//appium//build//lib//main.js"))
-                .withIPAddress("127.0.0.1").usingPort(4723).build();
+        service = new AppiumServiceBuilder().withAppiumJS(new File("//usr//local//lib//node_modules//appium//build//lib//main.js"))
+                .withIPAddress("127.0.0.1").usingPort(4890).build();
         service.start();
+        System.out.println("Application started");
 
 //        setting the desired capabilites
         UiAutomator2Options options = new UiAutomator2Options();
@@ -40,9 +41,9 @@ public class BaseTest {
 
     }
 
-//    @AfterClass
-//    public void teardown(){
-//        driver.quit();
-//        service.stop();
-//    }
+    @AfterClass
+    public void teardown(){
+        driver.quit();
+        service.stop();
+    }
 }

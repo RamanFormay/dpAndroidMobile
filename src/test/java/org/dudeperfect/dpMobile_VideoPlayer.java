@@ -30,7 +30,7 @@ public class dpMobile_VideoPlayer extends BaseTest {
         yearOfBirthPage.InputField("2000");
         yearOfBirthPage.selectCheckbox();
         yearOfBirthPage.clickContinueButton();
-        homeTabPage.clickLoadButton();
+//        homeTabPage.clickLoadButton();
         Assert.assertTrue(videoPlayerPage.videoTitleText());
         videoPlayerPage.clickForwardControl();
     }
