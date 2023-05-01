@@ -56,7 +56,10 @@
             <version>3.0.0</version>
             <configuration>
               <suiteXmlFiles>
-                <suiteXmlFile>testng_dudePerfect_splashScreen.xml</suiteXmlFile>
+                <suiteXmlFile>testSuites/testng_dudePerfect_splashScreen.xml</suiteXmlFile>
+                <suiteXmlFile>testSuites/testng_dudePerfect_findAdult.xml</suiteXmlFile>
+                <suiteXmlFile>testSuites/testng_dudePerfect_YOB.xml</suiteXmlFile>
+                <suiteXmlFile>testSuites/testng_dudePerfect_ageGate.xml</suiteXmlFile>
               </suiteXmlFiles>
             </configuration>
           </plugin>

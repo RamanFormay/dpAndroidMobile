@@ -5,12 +5,9 @@
         <listener class-name="org.dudeperfect.TestUtils.Listeners"/>
     </listeners>
 
-    <test name="Splash Screen Functionality Validation">
+    <test name="AgeGate Functionality Validation">
         <classes>
-            <class name="org.dudeperfect.dpMobile_SplashScreen">
-                <methods>
-                    <include name="SplashScreenValidation"></include>
-                </methods>
+            <class name="org.dudeperfect.dpMobile_AgeGate">
             </class>
         </classes>
     </test>
