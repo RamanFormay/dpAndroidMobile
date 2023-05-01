@@ -68,10 +68,6 @@
       </build>
     </profile>
 
-    <profile>
-      <id>Smoke</id>
-    </profile>
-
   </profiles>
 
 </project>
