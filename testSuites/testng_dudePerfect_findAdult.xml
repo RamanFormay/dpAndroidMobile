@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suites">
+    <listeners>
+        <listener class-name="org.dudeperfect.TestUtils.Listeners"/>
+    </listeners>
+
+    <test name="Find Adult Functionality Validation">
+        <classes>
+            <class name="org.dudeperfect.dpMobile_FindAdult">
+            </class>
+        </classes>
+    </test>
+</suite>
