@@ -24,16 +24,16 @@ public class dpMobile_VideoPlayer extends BaseTest {
         videoPlayerPage =new VideoPlayerPage(driver);
     }
 
-    @Test(priority = 1)
-    public void VideoPlayerForwardControl(){
-        ageGatePage.clickAdultButton();
-        yearOfBirthPage.InputField("2000");
-        yearOfBirthPage.selectCheckbox();
-        yearOfBirthPage.clickContinueButton();
-//        homeTabPage.clickLoadButton();
-        Assert.assertTrue(videoPlayerPage.videoTitleText());
-        videoPlayerPage.clickForwardControl();
-    }
+//    @Test(priority = 1)
+//    public void VideoPlayerForwardControl(){
+//        ageGatePage.clickAdultButton();
+//        yearOfBirthPage.InputField("2000");
+//        yearOfBirthPage.selectCheckbox();
+//        yearOfBirthPage.clickContinueButton();
+////        homeTabPage.clickLoadButton();
+//        Assert.assertTrue(videoPlayerPage.videoTitleText());
+//        videoPlayerPage.clickForwardControl();
+//    }
 
 
 

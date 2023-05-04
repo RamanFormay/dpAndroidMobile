@@ -1,6 +1,7 @@
 package org.dudeperfect;
 
 import io.appium.java_client.android.Activity;
+import io.appium.java_client.android.AndroidDriver;
 import org.dudeperfect.pageObjects.onBoarding.AgeGatePage;
 import org.dudeperfect.pageObjects.onBoarding.FindAdultPage;
 import org.dudeperfect.pageObjects.onBoarding.YearOfBirthPage;
@@ -11,6 +12,7 @@ import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
 public class dpMobile_AgeGate extends BaseTest{
+
     AgeGatePage ageGatePage;
     YearOfBirthPage yearOfBirthPage;
     FindAdultPage findAdultPage;
@@ -53,7 +55,7 @@ public class dpMobile_AgeGate extends BaseTest{
 
    }
     @Test(priority = 4)
-    public void AgeGatePage_YOBContinueButtonDisabled(){
+    public void AgeGatePage_YOBContinueButtonEnabled(){
         ageGatePage.clickAdultButton();
         yearOfBirthPage.InputField("2010");
         Assert.assertTrue(yearOfBirthPage.continueButton());
@@ -75,11 +77,12 @@ public class dpMobile_AgeGate extends BaseTest{
 //  Positive Adult Flow Validation
     @Test(priority = 6)
     public void AgeGatePage_AdultFlowValidation(){
+        ageGatePage = new AgeGatePage(driver);
+        yearOfBirthPage = new YearOfBirthPage(driver);
         ageGatePage.clickAdultButton();
         yearOfBirthPage.InputField("2000");
         yearOfBirthPage.selectCheckbox();
         yearOfBirthPage.clickContinueButton();
-        driver.resetApp();
     }
 
 }

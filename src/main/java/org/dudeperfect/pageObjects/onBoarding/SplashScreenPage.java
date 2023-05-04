@@ -16,6 +16,7 @@ public class SplashScreenPage {
     @AndroidFindBy(id = "tv.kidoodle.android.dudeperfect:id/logo")
     private WebElement dpLogo;
 
+//    Action Methods
     public boolean dpLogoDisplayed(){
         return dpLogo.isDisplayed();
     }

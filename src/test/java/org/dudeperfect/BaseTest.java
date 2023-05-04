@@ -21,11 +21,10 @@ public class BaseTest {
     @BeforeClass
     public static void open() throws MalformedURLException {
 
-        System.out.println("Application started");
+        System.out.println("----------Automation Scripts Started----------");
         service = new AppiumServiceBuilder().usingDriverExecutable(new File("//usr//local//bin//node"))
                 .withIPAddress("127.0.0.1").usingPort(4723).build();
         service.start();
-        System.out.println("Application started");
 
 //        setting the desired capabilites
         UiAutomator2Options options = new UiAutomator2Options();

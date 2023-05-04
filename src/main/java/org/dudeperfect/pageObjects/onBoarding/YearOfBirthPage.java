@@ -35,7 +35,7 @@ public class YearOfBirthPage {
     @AndroidFindBy(id="tv.kidoodle.android.dudeperfect:id/confirmButton")
     private WebElement continueButton;
 
-//   Action Methods
+//  Action Methods
     public String getYobTitle(){
         return yobTitle.getText();
     }

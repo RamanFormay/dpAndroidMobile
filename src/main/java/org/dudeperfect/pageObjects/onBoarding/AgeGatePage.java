@@ -14,13 +14,11 @@ public class AgeGatePage {
         this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
-
     @AndroidFindBy(id = "tv.kidoodle.android.dudeperfect:id/title")
     private WebElement title;
 
     @AndroidFindBy(id = "tv.kidoodle.android.dudeperfect:id/description")
     private WebElement description;
-
 
     @AndroidFindBy(id = "tv.kidoodle.android.dudeperfect:id/kidButton")
     private WebElement youthButton;

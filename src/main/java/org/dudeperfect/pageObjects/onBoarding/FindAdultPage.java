@@ -25,7 +25,6 @@ public class FindAdultPage {
     private WebElement backButton;
 
 //  Action Methods
-
     public String findAdultTitleText(){
         return findParentTitle.getText();
     }

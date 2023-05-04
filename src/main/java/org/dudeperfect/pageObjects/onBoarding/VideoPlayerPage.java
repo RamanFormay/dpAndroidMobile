@@ -40,12 +40,17 @@ public class VideoPlayerPage {
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ImageButton")
     public WebElement expandButton;
 
-    public boolean videoTitleText(){
+//  Action Methods
+    public boolean videoTitleDisplayed(){
         return videoTitle.isDisplayed();
     }
 
     public void clickForwardControl(){
         forwardControl.click();
+    }
+
+    public String getVideoTitleText(){
+       return videoTitle.getText();
     }
 
 }
