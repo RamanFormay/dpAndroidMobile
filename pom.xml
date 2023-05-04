@@ -60,6 +60,7 @@
                 <suiteXmlFile>testSuites/testng_dudePerfect_findAdult.xml</suiteXmlFile>
                 <suiteXmlFile>testSuites/testng_dudePerfect_YOB.xml</suiteXmlFile>
                 <suiteXmlFile>testSuites/testng_dudePerfect_ageGate.xml</suiteXmlFile>
+                <suiteXmlFile>testSuites/testng_dudePerfect_homeTab.xml</suiteXmlFile>
               </suiteXmlFiles>
             </configuration>
           </plugin>
