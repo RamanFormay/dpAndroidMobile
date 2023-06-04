@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.android.AndroidDriver;
 import org.dudeperfect.pageObjects.onBoarding.*;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -46,16 +47,22 @@ public class dpMobile_HomeTab extends BaseTest{
             homeTabPage.scrollToEnd();
             driver.resetApp();
         }
-
-         @Test(priority = 2)
+        @Test(priority=3)
+        public void HomeTab_SwipeValidation() throws InterruptedException {
+            ageGateTest.AgeGatePage_AdultFlowValidation();
+            WebElement firstEpisodeCard = homeTabPage.getEpisodeCardFirstElement();
+            Assert.assertEquals(firstEpisodeCard.getAttribute("focusable"),"true");
+            homeTabPage.swipeAction(firstEpisodeCard, "left");
+            Thread.sleep(2000);
+        }
+         @Test(priority = 4)
          public void HomeTab_PlayVideoValidation() throws InterruptedException {
              ageGateTest.AgeGatePage_AdultFlowValidation();
              Assert.assertTrue(homeTabPage.relatedVideoImageDisplayed());
              String currentEpisodeName= homeTabPage.getEpisodeName();
              homeTabPage.clickRelatedVideoImage();
              Thread.sleep(2000);
-             Ass
-//             Assert.assertEquals(currentEpisodeName, videoPlayerPage.getVideoTitleText());
+//           Assert.assertEquals(currentEpisodeName, videoPlayerPage.getVideoTitleText());
 
        }
 

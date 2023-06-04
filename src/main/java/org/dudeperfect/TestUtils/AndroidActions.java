@@ -10,6 +10,7 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebElement;
 
 import java.time.Duration;
 
@@ -47,6 +48,15 @@ public class AndroidActions {
             Thread.sleep(1000);
            count++;
         }
+    }
 
+    public void swipeAction(WebElement ele, String direction) {
+        ((JavascriptExecutor) driver).executeScript("mobile: swipeGesture", ImmutableMap.of(
+                "elementId", ((RemoteWebElement) ele).getId(),
+                "direction", direction,
+                "percent", 0.75
+        ));
+    }
 
-    }}
+}
+

@@ -44,9 +44,8 @@ public class HomeTabPage extends AndroidActions {
     public WebElement episodeName;
     @AndroidFindBy(id="tv.kidoodle.android.dudeperfect:id/relatedVideoImage")
     public WebElement relatedVideoImage;
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text='BOWLING']")
-    public WebElement bottomHeroCarousel;
-
+    @AndroidFindBy(xpath ="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]")
+    public WebElement episodeCardFirst;
 
 //  Action Methods
     public boolean loadingSpinnerDisplayed(){
@@ -86,8 +85,11 @@ public class HomeTabPage extends AndroidActions {
     public boolean homeButtonDisplayed(){
         return homeNavButton.isDisplayed();
     }
-
     public boolean joinButtonDisplayed(){
         return joinNavButton.isDisplayed();
+    }
+
+    public WebElement getEpisodeCardFirstElement(){
+        return episodeCardFirst;
     }
 }
