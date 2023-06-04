@@ -1,13 +1,11 @@
 package org.dudeperfect;
 
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -25,7 +23,7 @@ public class BaseTest {
         service = new AppiumServiceBuilder().usingDriverExecutable(new File("//usr//local//bin//node"))
                 .withIPAddress("127.0.0.1").usingPort(4723).build();
         service.start();
-
+        System.out.println("----------Automation Scripts Started----------");
 //        setting the desired capabilites
         UiAutomator2Options options = new UiAutomator2Options();
         options.setDeviceName("Raman");

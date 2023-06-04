@@ -76,9 +76,10 @@ public class dpMobile_AgeGate extends BaseTest{
 
 //  Positive Adult Flow Validation
     @Test(priority = 6)
-    public void AgeGatePage_AdultFlowValidation(){
+    public void AgeGatePage_AdultFlowValidation() throws InterruptedException {
         ageGatePage = new AgeGatePage(driver);
         yearOfBirthPage = new YearOfBirthPage(driver);
+        Thread.sleep(2000);
         ageGatePage.clickAdultButton();
         yearOfBirthPage.InputField("2000");
         yearOfBirthPage.selectCheckbox();

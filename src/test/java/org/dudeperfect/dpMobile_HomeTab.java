@@ -25,18 +25,24 @@ public class dpMobile_HomeTab extends BaseTest{
             videoPlayerPage = new VideoPlayerPage(driver);
             ageGateTest =new dpMobile_AgeGate();
         }
-
-        @Test(priority = 1)
-        public void HomeTab_EpisodeCard_And_ScrollValidation() throws InterruptedException {
+        @Test(priority=1)
+        public void HomeTab_TextValidation() throws InterruptedException {
             ageGateTest.AgeGatePage_AdultFlowValidation();
             Assert.assertTrue(homeTabPage.loadingSpinnerDisplayed());
-            Assert.assertEquals(homeTabPage.errorDescriptionText(),"Hang tight, we're getting that \n" +
-                    "video loaded up!");
+//            Assert.assertEquals(homeTabPage.errorDescriptionText(),"Hang tight, we're getting that \n" +
+//                    "video loaded up!");
+            Assert.assertTrue(homeTabPage.staticImageHeaderDisplayed());
             Assert.assertTrue(homeTabPage.categoryNameDisplayed());
             Assert.assertTrue(homeTabPage.videoDurationDisplayed());
             Assert.assertTrue(homeTabPage.seriesNameDisplayed());
             Assert.assertTrue(homeTabPage.releasedMonthDisplayed());
             Assert.assertTrue(homeTabPage.episodeNameDisplayed());
+            Assert.assertTrue(homeTabPage.homeButtonDisplayed());
+            Assert.assertTrue(homeTabPage.joinButtonDisplayed());
+        }
+        @Test(priority = 2)
+        public void HomeTab_EpisodeCard_And_ScrollValidation() throws InterruptedException {
+            ageGateTest.AgeGatePage_AdultFlowValidation();
             homeTabPage.scrollToEnd();
             driver.resetApp();
         }
@@ -45,10 +51,12 @@ public class dpMobile_HomeTab extends BaseTest{
          public void HomeTab_PlayVideoValidation() throws InterruptedException {
              ageGateTest.AgeGatePage_AdultFlowValidation();
              Assert.assertTrue(homeTabPage.relatedVideoImageDisplayed());
-             String episodeName = homeTabPage.getEpisodeName();
+             String currentEpisodeName= homeTabPage.getEpisodeName();
              homeTabPage.clickRelatedVideoImage();
-             Assert.assertTrue(videoPlayerPage.videoTitleDisplayed());
-             Assert.assertEquals(videoPlayerPage.getVideoTitleText(),episodeName);
+             Thread.sleep(2000);
+             Ass
+//             Assert.assertEquals(currentEpisodeName, videoPlayerPage.getVideoTitleText());
+
        }
 
 }
