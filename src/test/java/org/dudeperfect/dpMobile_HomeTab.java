@@ -40,6 +40,7 @@ public class dpMobile_HomeTab extends BaseTest{
             Assert.assertTrue(homeTabPage.episodeNameDisplayed());
             Assert.assertTrue(homeTabPage.homeButtonDisplayed());
             Assert.assertTrue(homeTabPage.joinButtonDisplayed());
+            driver.resetApp();
         }
         @Test(priority = 2)
         public void HomeTab_EpisodeCard_And_ScrollValidation() throws InterruptedException {
@@ -54,6 +55,7 @@ public class dpMobile_HomeTab extends BaseTest{
             Assert.assertEquals(firstEpisodeCard.getAttribute("focusable"),"true");
             homeTabPage.swipeAction(firstEpisodeCard, "left");
             Thread.sleep(2000);
+            driver.resetApp();
         }
          @Test(priority = 4)
          public void HomeTab_PlayVideoValidation() throws InterruptedException {
@@ -63,7 +65,7 @@ public class dpMobile_HomeTab extends BaseTest{
              homeTabPage.clickRelatedVideoImage();
              Thread.sleep(2000);
 //           Assert.assertEquals(currentEpisodeName, videoPlayerPage.getVideoTitleText());
-
+            driver.resetApp();
        }
 
 }
